@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sTC-OY-zAK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Training Listing-->
+        <scene sceneID="4ur-DR-j39">
+            <objects>
+                <viewController id="sTC-OY-zAK" customClass="TrainingViewController" customModule="Talent_Torrent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yqQ-US-rUo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="QkU-zE-64w">
+                                <rect key="frame" x="0.0" y="60" width="414" height="802"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkF-h9-EBW">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2g0-x6-fMn" customClass="ViewIBDesignable" customModule="Talent_Torrent" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="0.0" width="382" height="97"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="L9x-EG-Wve">
+                                                        <rect key="frame" x="24" y="8" width="334" height="67"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Programs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zd-Xh-Xa6">
+                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="17"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1S-dQ-LZg">
+                                                                <rect key="frame" x="0.0" y="29" width="334" height="38"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Title, Budget" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fg6-QI-ckl">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="38"/>
+                                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
+                                                                        <connections>
+                                                                            <outlet property="delegate" destination="sTC-OY-zAK" id="5uW-dw-eHc"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_btn" translatesAutoresizingMaskIntoConstraints="NO" id="uSo-RL-50o" customClass="ImageViewIBDesignable" customModule="Talent_Torrent" customModuleProvider="target">
+                                                                        <rect key="frame" x="301" y="6" width="26" height="26"/>
+                                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.43529411759999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundedCorners" value="YES"/>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </imageView>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJx-y6-cQD" customClass="ButtonIBDesignable" customModule="Talent_Torrent" customModuleProvider="target">
+                                                                        <rect key="frame" x="301" y="6" width="26" height="26"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="KJx-y6-cQD" secondAttribute="height" multiplier="1:1" id="nQC-Fh-29T"/>
+                                                                        </constraints>
+                                                                        <connections>
+                                                                            <action selector="searchButtonAction:" destination="sTC-OY-zAK" eventType="touchUpInside" id="Wiz-B0-qt3"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="KJx-y6-cQD" firstAttribute="height" secondItem="Q1S-dQ-LZg" secondAttribute="height" multiplier="26:38" id="BIv-Hc-bPb"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="KJx-y6-cQD" secondAttribute="trailing" constant="7" id="EUR-Qx-n3k"/>
+                                                                    <constraint firstItem="KJx-y6-cQD" firstAttribute="bottom" secondItem="uSo-RL-50o" secondAttribute="bottom" id="PDb-IY-GbE"/>
+                                                                    <constraint firstAttribute="height" constant="38" id="R4J-Vg-iMx"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="fg6-QI-ckl" secondAttribute="bottom" id="Ycb-oQ-eO9"/>
+                                                                    <constraint firstItem="KJx-y6-cQD" firstAttribute="trailing" secondItem="uSo-RL-50o" secondAttribute="trailing" id="acl-vo-h5l"/>
+                                                                    <constraint firstItem="KJx-y6-cQD" firstAttribute="centerY" secondItem="Q1S-dQ-LZg" secondAttribute="centerY" id="dBG-ck-pzA"/>
+                                                                    <constraint firstItem="KJx-y6-cQD" firstAttribute="leading" secondItem="uSo-RL-50o" secondAttribute="leading" id="mlA-pi-FeJ"/>
+                                                                    <constraint firstItem="KJx-y6-cQD" firstAttribute="top" secondItem="uSo-RL-50o" secondAttribute="top" id="q1i-9i-Y2c"/>
+                                                                    <constraint firstItem="fg6-QI-ckl" firstAttribute="leading" secondItem="Q1S-dQ-LZg" secondAttribute="leading" id="rbf-H1-lur"/>
+                                                                    <constraint firstItem="fg6-QI-ckl" firstAttribute="top" secondItem="Q1S-dQ-LZg" secondAttribute="top" id="ruU-M7-6eZ"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="fg6-QI-ckl" secondAttribute="trailing" id="vY0-Yq-2y2"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="L9x-EG-Wve" secondAttribute="trailing" constant="24" id="F1j-np-mAL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="L9x-EG-Wve" secondAttribute="bottom" constant="22" id="RkT-No-hI6"/>
+                                                    <constraint firstItem="L9x-EG-Wve" firstAttribute="top" secondItem="2g0-x6-fMn" secondAttribute="top" constant="8" id="dqg-mU-aFc"/>
+                                                    <constraint firstItem="L9x-EG-Wve" firstAttribute="leading" secondItem="2g0-x6-fMn" secondAttribute="leading" constant="24" id="guM-17-4dU"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="40"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="2g0-x6-fMn" firstAttribute="top" secondItem="gkF-h9-EBW" secondAttribute="top" id="ben-6d-Miv"/>
+                                            <constraint firstAttribute="bottom" secondItem="2g0-x6-fMn" secondAttribute="bottom" id="fFg-8P-esu"/>
+                                            <constraint firstAttribute="trailing" secondItem="2g0-x6-fMn" secondAttribute="trailing" constant="16" id="t1a-Jq-E2s"/>
+                                            <constraint firstItem="2g0-x6-fMn" firstAttribute="leading" secondItem="gkF-h9-EBW" secondAttribute="leading" constant="16" id="udp-Eg-YvD"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="0RX-Be-PSE" appends="YES" id="ZwB-Bk-gop"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFH-Ue-Ih2">
+                                        <rect key="frame" x="0.0" y="120" width="414" height="682"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P7I-xJ-6tC">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="682"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DBi-yD-D5k">
+                                                    <size key="itemSize" width="341" height="166"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="P7I-xJ-6tC" secondAttribute="bottom" id="1g8-Jd-QD4"/>
+                                            <constraint firstItem="P7I-xJ-6tC" firstAttribute="top" secondItem="wFH-Ue-Ih2" secondAttribute="top" id="6ZS-QR-ESg"/>
+                                            <constraint firstItem="P7I-xJ-6tC" firstAttribute="leading" secondItem="wFH-Ue-Ih2" secondAttribute="leading" id="kQk-9R-6L0"/>
+                                            <constraint firstAttribute="trailing" secondItem="P7I-xJ-6tC" secondAttribute="trailing" id="qQd-oz-hDy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n8b-eR-kEg"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="QkU-zE-64w" firstAttribute="leading" secondItem="n8b-eR-kEg" secondAttribute="leading" id="3JH-VF-FPn"/>
+                            <constraint firstItem="n8b-eR-kEg" firstAttribute="bottom" secondItem="QkU-zE-64w" secondAttribute="bottom" id="8xa-6o-6s1"/>
+                            <constraint firstItem="n8b-eR-kEg" firstAttribute="trailing" secondItem="QkU-zE-64w" secondAttribute="trailing" id="lc6-os-aZ4"/>
+                            <constraint firstItem="QkU-zE-64w" firstAttribute="top" secondItem="n8b-eR-kEg" secondAttribute="top" constant="16" id="xcV-q2-r4G"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Training Listing" id="Cjy-FA-wU6">
+                        <barButtonItem key="backBarButtonItem" title=" " id="f1g-9f-DLK"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="P7I-xJ-6tC" id="p1c-H5-tmQ"/>
+                        <outlet property="searchButton" destination="KJx-y6-cQD" id="Xa6-PS-Oyb"/>
+                        <outlet property="searchButtonImage" destination="uSo-RL-50o" id="7Pp-tB-tdN"/>
+                        <outlet property="searchTextField" destination="fg6-QI-ckl" id="bc7-hj-Wsy"/>
+                        <outlet property="stackViewBottom" destination="8xa-6o-6s1" id="SEp-6b-9PS"/>
+                        <outlet property="tapGestureRecognizer2" destination="EMC-YZ-xIp" id="Gcd-fB-Vpo"/>
+                        <segue destination="SQP-eJ-FlY" kind="show" identifier="TrainingDetails" id="1ZX-SH-W3P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6g-Pd-Xsd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0RX-Be-PSE" userLabel="Tap Gesture Recognizer 1">
+                    <connections>
+                        <action selector="tapGestureRecognizer:" destination="sTC-OY-zAK" id="yNi-iW-lvQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="EMC-YZ-xIp" userLabel="Tap Gesture Recognizer 2">
+                    <connections>
+                        <action selector="tapGestureRecognizer:" destination="sTC-OY-zAK" id="hQ6-u3-0NF"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="269.60000000000002" y="109.29535232383809"/>
+        </scene>
+        <!--TrainingDetails-->
+        <scene sceneID="pP5-hm-tIR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TrainingDetails" id="SQP-eJ-FlY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4Ob-Ic-TPu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0QG-0D-rGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="552"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="KJx-y6-cQD">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="uSo-RL-50o">
+            <size key="intrinsicContentSize" width="26" height="26"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="search_btn" width="26" height="26"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

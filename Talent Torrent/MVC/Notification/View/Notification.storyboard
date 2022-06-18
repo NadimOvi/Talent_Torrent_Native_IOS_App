@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dd4-mR-TG4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification-->
+        <scene sceneID="J6H-lX-Ryj">
+            <objects>
+                <viewController id="Q9c-DB-IIJ" customClass="NotificationVC" customModule="Talent_Torrent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FYF-4q-azO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="plv-ks-HOB">
+                                <rect key="frame" x="0.0" y="108" width="414" height="685"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ODw-xa-Zch"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="plv-ks-HOB" firstAttribute="top" secondItem="ODw-xa-Zch" secondAttribute="top" constant="20" id="2Aq-fx-F01"/>
+                            <constraint firstItem="ODw-xa-Zch" firstAttribute="trailing" secondItem="plv-ks-HOB" secondAttribute="trailing" id="NXh-c5-YVc"/>
+                            <constraint firstItem="plv-ks-HOB" firstAttribute="leading" secondItem="ODw-xa-Zch" secondAttribute="leading" id="Woq-WZ-bCE"/>
+                            <constraint firstItem="ODw-xa-Zch" firstAttribute="bottom" secondItem="plv-ks-HOB" secondAttribute="bottom" constant="20" id="qV3-Hy-XKm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notification" id="TZb-Cg-Zxw">
+                        <barButtonItem key="backBarButtonItem" title=" " id="SgA-IL-ffh"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fullViewContainerTableView" destination="plv-ks-HOB" id="adp-56-5EZ"/>
+                        <outlet property="tableView" destination="plv-ks-HOB" id="Hqa-52-V7E"/>
+                        <segue destination="Rsn-Cv-XEa" kind="presentation" identifier="Login" id="eSE-kR-WdX"/>
+                        <segue destination="dBn-sJ-T7W" kind="show" identifier="NotificationDetails" id="ZnR-Dq-0nJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLh-0u-FGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6108.6956521739139" y="68.973214285714278"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="cx1-4h-KvZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="Rsn-Cv-XEa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="htb-CT-CDQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZv-hU-vuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5985" y="486"/>
+        </scene>
+        <!--NotificationDetails-->
+        <scene sceneID="ixU-K6-Eq5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NotificationDetails" id="dBn-sJ-T7W" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Xb4-PO-j9r"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sO8-uz-gcb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6205" y="486"/>
+        </scene>
+        <!--Notification-->
+        <scene sceneID="YtT-Ak-Rw9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dd4-mR-TG4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notification" image="notification_light" selectedImage="notification_dark" id="fq5-MJ-JuY"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="0nT-3q-atq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Q9c-DB-IIJ" kind="relationship" relationship="rootViewController" id="Wlm-Yu-t9s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SU6-ZP-xhT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6109" y="-669"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="notification_dark" width="24" height="24"/>
+        <image name="notification_light" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExpertCellCollectionViewCell" id="gTV-IL-0wX" customClass="ExpertCellCollectionViewCell" customModule="Talent_Torrent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgJ-Js-rwQ" customClass="ViewIBDesignable" customModule="Talent_Torrent" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4hN-Ef-wG6">
+                                <rect key="frame" x="0.0" y="0.0" width="124" height="50"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                <color key="textColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.32549019607843138" alpha="0.1502568493150685" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4hN-Ef-wG6" secondAttribute="bottom" id="Ion-dl-Hnh"/>
+                            <constraint firstItem="4hN-Ef-wG6" firstAttribute="top" secondItem="CgJ-Js-rwQ" secondAttribute="top" id="QpC-Ea-UHr"/>
+                            <constraint firstItem="4hN-Ef-wG6" firstAttribute="leading" secondItem="CgJ-Js-rwQ" secondAttribute="leading" id="Siy-aI-uRf"/>
+                            <constraint firstAttribute="trailing" secondItem="4hN-Ef-wG6" secondAttribute="trailing" id="fAj-Kc-bLe"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="CgJ-Js-rwQ" secondAttribute="trailing" id="DsA-1b-NWM"/>
+                <constraint firstItem="CgJ-Js-rwQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="K7c-iQ-Btp"/>
+                <constraint firstAttribute="bottom" secondItem="CgJ-Js-rwQ" secondAttribute="bottom" id="dZo-oe-xKU"/>
+                <constraint firstItem="CgJ-Js-rwQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yYk-hj-CYv"/>
+            </constraints>
+            <size key="customSize" width="124" height="50"/>
+            <connections>
+                <outlet property="skillLabel" destination="4hN-Ef-wG6" id="l2B-Rf-JQD"/>
+            </connections>
+            <point key="canvasLocation" x="-143.47826086956522" y="81.696428571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

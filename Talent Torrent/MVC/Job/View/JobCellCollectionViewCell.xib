@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="JobCellCollectionViewCell" id="gTV-IL-0wX" customClass="JobCellCollectionViewCell" customModule="Talent_Torrent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="95" height="37"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="95" height="37"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4g4-7A-sNZ" customClass="ViewIBDesignable" customModule="Talent_Torrent" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="95" height="37"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#PHP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfz-CT-1lX">
+                                <rect key="frame" x="0.0" y="0.0" width="95" height="37"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                <color key="textColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.32549019607843138" alpha="0.1502568493150685" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kfz-CT-1lX" firstAttribute="top" secondItem="4g4-7A-sNZ" secondAttribute="top" id="VID-Kh-5HL"/>
+                            <constraint firstItem="Kfz-CT-1lX" firstAttribute="leading" secondItem="4g4-7A-sNZ" secondAttribute="leading" id="aPA-J4-lNb"/>
+                            <constraint firstAttribute="trailing" secondItem="Kfz-CT-1lX" secondAttribute="trailing" id="cl5-U8-3XL"/>
+                            <constraint firstAttribute="bottom" secondItem="Kfz-CT-1lX" secondAttribute="bottom" id="xJ5-oV-nfi"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="4g4-7A-sNZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UVK-eP-FVk"/>
+                <constraint firstAttribute="bottom" secondItem="4g4-7A-sNZ" secondAttribute="bottom" id="gIK-KR-AEO"/>
+                <constraint firstAttribute="trailing" secondItem="4g4-7A-sNZ" secondAttribute="trailing" id="npd-mf-oii"/>
+                <constraint firstItem="4g4-7A-sNZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ymF-4x-mDe"/>
+            </constraints>
+            <size key="customSize" width="95" height="37"/>
+            <connections>
+                <outlet property="skillLabel" destination="Kfz-CT-1lX" id="iWZ-at-5F5"/>
+            </connections>
+            <point key="canvasLocation" x="173.18840579710147" y="75.334821428571431"/>
+        </collectionViewCell>
+    </objects>
+</document>

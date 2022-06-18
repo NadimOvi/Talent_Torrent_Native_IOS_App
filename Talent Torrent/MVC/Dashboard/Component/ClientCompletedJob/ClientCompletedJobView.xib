@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClientCompletedJobView" customModule="Talent_Torrent" customModuleProvider="target">
+            <connections>
+                <outlet property="activeJobCollectionView" destination="Y2d-Bu-wr1" id="Iua-o0-KlY"/>
+                <outlet property="noJobFoundShowLabel" destination="WFx-Yk-5F1" id="DIP-yS-4yk"/>
+                <outlet property="noJobFoundShowView" destination="DEs-jg-ef0" id="j2T-Zg-gtt"/>
+                <outlet property="view" destination="G10-QG-PlQ" id="doH-wo-6d6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="G10-QG-PlQ">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Y2d-Bu-wr1">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wXy-IW-n1p">
+                        <size key="itemSize" width="343" height="280"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEs-jg-ef0">
+                    <rect key="frame" x="20" y="20" width="374" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Job Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFx-Yk-5F1">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="uvD-pe-bpQ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="WFx-Yk-5F1" secondAttribute="bottom" id="W63-ZY-CW9"/>
+                        <constraint firstAttribute="trailing" secondItem="WFx-Yk-5F1" secondAttribute="trailing" id="WKK-rD-qPu"/>
+                        <constraint firstItem="WFx-Yk-5F1" firstAttribute="leading" secondItem="DEs-jg-ef0" secondAttribute="leading" id="lqK-GX-eK2"/>
+                        <constraint firstItem="WFx-Yk-5F1" firstAttribute="top" secondItem="DEs-jg-ef0" secondAttribute="top" id="pvH-yt-bLS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="3IB-Z8-rtk"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="DEs-jg-ef0" secondAttribute="trailing" constant="20" id="5oY-z3-IZ7"/>
+                <constraint firstAttribute="trailing" secondItem="Y2d-Bu-wr1" secondAttribute="trailing" id="IPj-ju-agL"/>
+                <constraint firstItem="DEs-jg-ef0" firstAttribute="leading" secondItem="G10-QG-PlQ" secondAttribute="leading" constant="20" id="OZ4-rp-V9E"/>
+                <constraint firstItem="Y2d-Bu-wr1" firstAttribute="leading" secondItem="G10-QG-PlQ" secondAttribute="leading" id="Q6p-50-Xxl"/>
+                <constraint firstAttribute="bottom" secondItem="Y2d-Bu-wr1" secondAttribute="bottom" id="Wpn-yR-2Cq"/>
+                <constraint firstItem="DEs-jg-ef0" firstAttribute="top" secondItem="G10-QG-PlQ" secondAttribute="top" constant="20" id="oZF-gk-aFO"/>
+                <constraint firstItem="Y2d-Bu-wr1" firstAttribute="top" secondItem="G10-QG-PlQ" secondAttribute="top" id="y1E-zF-skl"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-46.376811594202906" y="75.669642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
